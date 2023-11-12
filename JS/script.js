@@ -8,4 +8,18 @@ $('.fa-xmark').click(function(){
 
 $('.fa-magnifying-glass').click(function(){
     $('.searchbar').toggleClass('show')
-})
+});
+window.onscroll = function() {myFunction()};
+
+var header = document.querySelector(".nav-bar");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
