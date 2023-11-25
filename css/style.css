@@ -28,6 +28,7 @@
     width: 100%;
     top: 0;
     padding-top: .5rem;
+    z-index: 5;
 }
 .fa-bars{
     font-size: 1.4rem;
@@ -227,13 +228,88 @@ h3{
 }
 .row{
     display: flex;
-    padding: 10px;
+}
+.new-col{
+    position: relative;
 }
 .new-col img{
     width: 100%;
     height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+.detail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in;
+    z-index: 1;
+}
+.detail:hover{
+    background-color: rgba(192, 130, 197, 0.5);
+    cursor: pointer;
 }
 
+.detail h2{
+    color:#ffffff;
+    transform:translate(0,280px);
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    background-color: #6262c566;   
+}
+
+.detail .btn{
+    color: white;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    transform: translate(30px,350px);
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+}
+.detail .btn:hover{
+    cursor: pointer;
+    color: #000000;
+    transition: .3s ease-in;
+    border-bottom: 1px solid #000000;
+}
+
+.products{
+    padding: 50px;
+    text-align:center;
+}
+
+.swiper{
+    width:100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide{
+    background-color: #226272;
+
+}
+@media(max-width:810px){
+    .detail h2{
+        font-size: 20px;
+        font-weight: 100;
+        transform:translate(0,100px);
+    }
+    .detail .btn{
+        font-size: 16px;
+        font-weight: 100;
+        transform: translate(15px,150px)
+    }
+}
 @media(max-width:800px){
     .nav-bar{
         justify-content: space-between;
@@ -279,11 +355,11 @@ h3{
     .intro-text{
         width:90%;
         font-size: 1rem;
-        margin-top: 2rem;
+        margin-top: 1.4rem;
     }
     .shopbtn{
         width: 60%;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     .brand-col{
         flex-direction: column;
@@ -299,6 +375,19 @@ h3{
     .brand-col1 img {
         width: 50%;
         margin-right: 1px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .detail h2{
+        transform:translate(0,150px);
+        padding: 10px;
+        font-size: 20px; 
+    }
+    
+    .detail .btn{
+        font-size: 14px;
+        transform: translate(30px,200px);
     }
     
     
@@ -334,5 +423,15 @@ h3{
     }
     .row {
         flex-direction: column;
+    }
+    .detail h2{
+        transform:translate(0,150px);
+        padding: 10px;
+        font-size: 20px; 
+    }
+    
+    .detail .btn{
+        font-size: 14px;
+        transform: translate(10px,200px);
     }
 }
