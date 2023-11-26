@@ -23,27 +23,29 @@ function myFunction() {
   }
 }
 //swiper
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // direction: 'vertical',
-  // loop: true,
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   // direction: 'vertical',
+//   // loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
+
+
 
 const productList=[
   {id:1,image:'../images/goldNecklace.jpg',productName:"Gold Necklace",price:"14000 Birr"},
@@ -71,5 +73,55 @@ const productListContainer = document.getElementById('row');
   productElements.forEach(productElement => {
     productListContainer.appendChild(productElement);
   });
+
+  const feedbackList = [
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+    {id:1,imageurl:'../images/Craftman.jpg',name:'Andrew Tate',desc:'"Absolutely enchanted by my luxury watch! Its timeless design and impeccable craftsmanship reflect the epitome of elegance. '},
+  ]
+
+  const feedbackListContainer = document.getElementById('swiper-wrapper');
+
+  const feedbackElement = feedbackList.map(feedback =>{
+    const feedbackDiv=document.createElement('div');
+    feedbackDiv.classList.add("swiper-slide");
+    feedbackDiv.innerHTML=`
+    <img src="${feedback.imageurl}" alt="${feedback.name}>
+    <div class="feedback-box">
+    <h3>${feedback.name}</h3>
+    <p>${feedback.desc}</p>
+    </div>
+    `;
+    return feedbackDiv;
+  });
+
+  feedbackElement.forEach(feedbackElement =>{
+    feedbackListContainer.appendChild(feedbackElement)
+  });
+
+  //swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  freeMode: true,
+  breakpoints: {
+    // when window width is >= 768px (tablet)
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    // when window width is >= 480px (smartphone)
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  
+});
 
 

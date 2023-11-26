@@ -280,27 +280,12 @@ h3{
     transition: .3s ease-in;
     border-bottom: 1px solid #000000;
 }
-
-.products{
-    padding: 50px;
-    text-align:center;
-}
-
-.swiper{
-    width:100%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.swiper-slide{
-    background-color: #226272;
-}
 .features{
     text-align: center;
-    margin: 5rem auto;
+    margin: 6rem auto;
     padding: 2rem;
     padding-top: 6rem;
+    margin-bottom: 3rem;
 }
 .features h2{
     margin-bottom: 10px;
@@ -325,8 +310,7 @@ hr{
 
 .productCol{
     flex: 1 0 calc(25% - 20px);
-    margin: 5rem 10px;
-    margin-bottom: 3rem;
+    margin: 1.5rem 10px;
     line-height: 1.4rem;
     cursor: pointer;
 
@@ -359,6 +343,154 @@ hr{
         transform: translateY(0);
         opacity: 1;
 }
+.history{
+    text-align: center;
+    margin: 1.5rem auto;
+    padding: 6rem 6rem;
+    background-color: #fafafa;
+}
+.history h2{
+    margin-bottom: 10px;
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 24px;
+}
+.history hr{
+    margin-bottom: 4rem;
+}
+.history .row{
+    align-items: center;
+    justify-content: space-evenly;
+}
+.background-story h3{
+    color: black;
+    margin-bottom: 2rem;
+}
+.background-story{
+    width: 50%;
+    margin: auto;
+}
+.background-story p{
+    text-align: center;
+}
+.history img{
+    width: 40%;
+    height: 50%;
+    border-radius: 50%;
+}
+.products{
+    padding: 50px;
+    text-align:center;
+}
+.feedback{
+    width: 98%;
+    margin: auto;
+    margin-top: 6rem;
+    padding: 3rem 0;
+    text-align: center;
+
+}
+.feedback h2{
+    margin-bottom: 10px;
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 24px;
+}
+.feedback hr{
+    margin-bottom: 4rem;
+}
+.swiper {
+    width: 100%;
+    height: 80%;
+    padding-bottom: 10rem;
+}
+  .swiper-slide {
+    background: #f8e9f2;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 3rem;
+}
+  .swiper-slide:hover{
+    cursor: pointer;
+    transition: 0.3s all;
+    background: #e7dbdb;
+}
+  .swiper-slide img {
+    width: 40px;
+    border-radius: 50%;
+}
+  .swiper-slide h3{
+    color: #333333;
+    font-size: 20px;
+    margin-top: 0;
+    padding: 0;
+  }
+  .swiper-slide p{
+    color: #1a1515;
+    font-size: 14px;
+  }
+  .pagination-bullet{
+    color: #226272;
+  }
+  .footer{
+    width: 100%;
+    height: 79vh;
+    background-color: #000000;
+    margin-top:10rem;
+    align-items: center;
+    color: white;
+  }
+  .footer .row{
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-col{
+    flex-basis: 28%;
+    padding-top: 5rem;
+    margin-right: 2rem;
+  }
+  .footer-col .brand-logo{
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .brand-desc{
+    margin-top: 2rem;
+  }
+  .footer-list{
+    list-style: none;
+    line-height: 2rem;
+  }
+  .footer-list li a{
+    text-decoration: none;
+    color: white;
+  }
+  .footer-list li a:hover{
+    text-decoration: dashed;
+    color: rgb(209, 116, 228);
+  }
+  .footer-contact{
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+  .footer-contact span{
+    color: rgb(172, 167, 167);
+  }
+  .copyright{
+    padding-top: 6rem;
+    align-items: center;
+  }
+  .copyright-col{
+    margin: auto;
+  }
+  .fa-cc-visa, .fa-cc-mastercard, .fa-cc-amex{
+    font-size: 50px;
+    margin-right: 1rem;
+  }
+  .copyright-col .fa-instagram, .fa-facebook, .fa-twitter, .fa-tiktok{
+    margin-bottom: 0;
+  }
+
+  
+
 @media(max-width:810px){
     .detail h2{
         font-size: 25px;
@@ -367,6 +499,9 @@ hr{
     .detail .btn{
         font-size: 18px;
         transform:translate(20px,200px);
+    }
+    .footer{
+        height: 60vh;
     }
 }
 @media(max-width:768px){
@@ -451,6 +586,27 @@ hr{
     .productCol{
         flex: 1 0 calc(50% - 20px);
     }
+    .history{
+        padding: 1rem 0;
+    }
+    .background-story{
+        width: 80%;
+    }
+    .history hr{
+        margin-bottom: 1rem;
+    }
+    .background-story p{
+        margin-bottom: 1rem;
+    }
+    .footer{
+        height: 80vh;
+    }
+
+    .footer-col{
+        flex-basis: 28%;
+        padding-top: 2.5rem;
+        margin-right: 1rem;
+      }
 }
 
 @media (max-width:480px){
@@ -496,5 +652,39 @@ hr{
     }
     .productCol{
         flex: 1 0 calc(100% - 20px);
+    }
+    .footer-col{
+        flex-basis: 28%;
+        padding-top: .8rem;
+        margin-right: .4rem;
+    }
+    .footer-col .brand-logo{
+        margin-bottom: .5rem;
+    }
+    .brand-desc{
+        margin-top: 1rem;
+    }
+    .footer-list{
+        line-height: 1.2rem;
+    }
+    .footer-contact{
+        margin-bottom: 0px;
+        line-height: 20px;
+    }
+    .copyright{
+        padding-top: 1.8rem;
+    }
+    .copyright-col{
+        margin-bottom: 5px;
+        height: auto;
+    }
+    .fa-cc-visa, .fa-cc-mastercard, .fa-cc-amex{
+        margin-right: .5rem;
+        font-size: 20px;
+    }
+}
+@media (max-width:375px){
+    .footer{
+        height: 100vh;
     }
 }
